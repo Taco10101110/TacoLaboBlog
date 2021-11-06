@@ -1,0 +1,22 @@
+{
+  "name": "tacolabo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "node-sass": "4.12",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "ress": "^4.0.0",
+    "sass-loader": "10.2"
+  }
+}
