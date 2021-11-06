@@ -48,7 +48,7 @@ export default {
         })
         .then((res) =>
           res.data.contents.map((content) => ({
-            route: `/b/${content.id}`,
+            route: `/b/${content.category}/${content.id}`,
             payload: content
           }))
         )
