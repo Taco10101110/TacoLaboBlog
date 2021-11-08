@@ -35,7 +35,14 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'nuxt-webfontloader'
   ],
+
+  webfontloader: {
+    google: {
+      families: ['Mochiy Pop P One']
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
