@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+## MediaQuery
+--------------------------------------------------------------*/
+$breakpoints: (
+    'xs': 'screen and (min-width: 1px) and (max-width:360px)',
+    'sp': 'screen and (min-width: 361px) and (max-width:420px)',
+    'tb': 'screen and (min-width: 421px) and (max-width:768px)',
+    'pc': 'screen and (min-width: 769px) and (max-width:1200px)',
+    'xl': 'screen and (min-width: 1201px)',
+    'SPTB': 'screen and (min-width: 1px) and (max-width:768px)',
+    'PCXL': 'screen and (min-width: 769px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
