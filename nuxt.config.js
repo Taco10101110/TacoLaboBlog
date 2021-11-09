@@ -40,7 +40,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Mochiy Pop P One']
+      families: ['Noto Sans Japanese','Mochiy Pop P One','Kaisei Tokumin', 'Rampart One']
     }
   },
 

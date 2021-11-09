@@ -1,17 +1,25 @@
 <template>
   <TclTexture class="background" :pattern="bgpattern" :color1="bgcolor1" :color2="bgcolor2" :color3="bgcolor3">
     <TclPanel class="panel" :pattern="'grass-01'">
-      <h2>テクスチャ- デザインパターン</h2>
+      <h1 class="title">
+        <TclTypography
+          class="title-typo"
+          :pattern="'retro-02'"
+          :content="'テクスチャ'"
+          :font="'Rampart One'"
+        />
+      </h1>
       <TclPanel class="description" :pattern="'gradborder-01'">
         <p>様々な質感を表現しWebデザインにリアリティを出すテクスチャ。旧来は画像を張る方式が主流でしたが、令和時代はCSSグラデーションを駆使します。</p>
         <p>高コントラストだとポップで元気な、低コントラストだと上品で落ち着いた印象を与えます。色やパターンを選んで試してみてください。</p>
       </TclPanel>
-      <h3>スタイルを選択</h3>
+      <h2>色を選択</h2>
       <div class="colorbuttons">
         <input v-model="bgcolor1" type="color" class="colorbutton1">
         <input v-model="bgcolor2" type="color" class="colorbutton1">
         <input v-model="bgcolor3" type="color" class="colorbutton1">
       </div>
+      <h2>テクスチャ デザインパターン</h2>
       <h3>チェック</h3>
       <div class="patterns">
         <div v-for="pattern in FilterPatterns('check')" :key="pattern.name" class="pattern" @click="bgpattern=pattern.name">
@@ -58,10 +66,12 @@
 <script>
 import TclPanel from '~/components/tacolib/TclPanel.vue'
 import TclTexture from '~/components/tacolib/TclTexture.vue'
+import TclTypography from "~/components/tacolib/TclTypography.vue";
 export default {
   components: {
     TclPanel,
-    TclTexture
+    TclTexture,
+    TclTypography
   },
   layout: 'default',
   data: () => ({
@@ -111,13 +121,20 @@ export default {
   justify-content: center;
   .panel{
     border-radius: 3vw;
+    max-width: 600px;
+    h1,
+    h2,
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 0.2em;
+    }
+    .title {
+      text-align: center;
+      font-weight: bold;
+    }
     .description{
       font-size:0.8rem;
       margin: 1rem auto;
-    }
-    .h2,h3{
-      margin-top: 0.6rem;
-      margin-bottom: 0.2rem;
     }
     .colorbuttons{
       display: flex;
@@ -155,6 +172,10 @@ export default {
       width: 80%;
       min-height: 80vh;
       margin: 10% 10%;
+      .title {
+        font-size: 2em;
+        margin-top: -30px;
+      }
       .description{
         width:80%;
       }
@@ -178,6 +199,10 @@ export default {
       width: 70%;
       min-height: 70vh;
       margin: 15% 15%;
+      .title {
+        font-size: 4em;
+        margin-top: -8%;
+      }
       .description{
         width:50%;
       }
