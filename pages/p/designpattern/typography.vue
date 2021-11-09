@@ -17,12 +17,20 @@
         <div v-for="pattern in patternList" :key="pattern.name" class="pattern">
           <h2>
             <TclTypography
-              class="texture"
+              class="typo-h2"
               :pattern="pattern.name"
               :content="pattern.desc"
               :color1="bgcolor1" :color2="bgcolor2" :color3="bgcolor3"
             />
           </h2>
+          <p>
+            <TclTypography
+              class="typo-p"
+              :pattern="pattern.name"
+              :content="pattern.desc"
+              :color1="bgcolor1" :color2="bgcolor2" :color3="bgcolor3"
+            />
+          </p>
         </div>
       </div>
     </TclPanel>
@@ -45,9 +53,15 @@ export default {
     bgcolor2: '#0B2342',
     bgcolor3: '#51a9df',
     patternList: [
-      { name: 'retro-01', type: 'retro', desc: 'レトロ' },
-      { name: 'retro-02', type: 'retro', desc: 'レトロ' },
-      { name: 'retro-03', type: 'retro', desc: 'レトロ' }
+      { name: 'gradation-02', type: 'grad', desc: 'グラデーション' },
+      { name: 'gradation-04', type: 'grad', desc: 'キラリンッ' },
+      { name: 'blight-01', type: 'blight', desc: 'ネオン' },
+      { name: 'pop-01', type: 'pop', desc: 'ポップアート' },
+      //{ name: 'pop-02', type: 'pop', desc: 'ポップヘッドライン' },
+      { name: 'retro-02', type: 'retro', desc: 'レトロステッカー' },
+      { name: 'retro-03', type: 'retro', desc: 'レトロストライプ' },
+      { name: 'retro-01', type: 'retro', desc: 'レトロレイヤー' },
+      { name: 'monotone-01', type: 'mono', desc: 'モノトーン' }
     ]
   }),
   computed: {
@@ -82,6 +96,15 @@ export default {
       justify-content: left;
       .colorbutton1,.colorbutton2{
         height: 3rem;
+      }
+    }
+    .typos{
+      .typo-h2{
+        font-size: 3em;
+        font-family: 'Mochiy Pop P One', sans-serif;
+      }
+      .typo-p{
+        font-size: 1.5em;
       }
     }
   }
