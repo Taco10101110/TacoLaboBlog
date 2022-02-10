@@ -1,5 +1,5 @@
 <template>
-  <h2>Taco Labo First View</h2>
+  <img src="@/assets/iconbusiness.png">
 </template>
 
 <script>
@@ -18,4 +18,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  img{
+    width:100%;
+  }
 </style>
